@@ -1,6 +1,8 @@
 package ph.me.infokotor;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -60,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        if (currentKotek[0] == 3){
+                        if (currentKotek[0] == listKotki.length-1){
                             currentKotek[0] = 0;
                         }
                         else {
@@ -76,12 +78,37 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         if (currentKotek[0] == 0){
-                            currentKotek[0] = 3;
+                            currentKotek[0] = listKotki.length-1;
                         }
                         else {
                             currentKotek[0]--;
                         }
                         kotek.setImageDrawable(getDrawable(listKotki[currentKotek[0]]));
+                    }
+                }
+        );
+        editText.addTextChangedListener(
+                new TextWatcher() {
+                    @Override
+                    public void afterTextChanged(Editable editable) {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                    }
+
+                    @Override
+                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                        String aberg = charSequence.toString();
+                        if (aberg.matches("-?\\d+(\\.\\d+)?")){
+                            int abergor = Integer.parseInt(aberg);
+                            if (abergor <= listKotki.length){
+                                currentKotek[0] = abergor - 1;
+                                kotek.setImageDrawable(getDrawable(listKotki[currentKotek[0]]));
+                            }
+                        }
                     }
                 }
         );

@@ -81,8 +81,8 @@
                 android:textColor="@color/darkerGreen"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="text"
-                android:text="numer kotka" />
+                android:inputType="number"
+                android:text="" />
         </LinearLayout>
 
         <LinearLayout
