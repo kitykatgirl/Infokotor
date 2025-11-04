@@ -7,12 +7,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center_vertical"
+    android:background="@color/lighterGreen"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textGaleria"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:textSize="35sp"
         android:text="Galeria" />
 
@@ -40,6 +42,8 @@
                 android:id="@+id/buttonPrev"
                 android:layout_width="130dp"
                 android:layout_height="75dp"
+                android:backgroundTint="@color/darkerGreen"
+                android:textColor="@color/white"
                 android:text="PREV" />
 
             <View
@@ -51,6 +55,8 @@
                 android:id="@+id/buttonNext"
                 android:layout_width="130dp"
                 android:layout_height="75dp"
+                android:backgroundTint="@color/darkerGreen"
+                android:textColor="@color/white"
                 android:text="NEXT" />
         </LinearLayout>
 
@@ -65,12 +71,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Ktory obraz wyswietlic?"
+                android:textColor="@color/darkerGreen"
                 android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/editTextKotek"
                 android:layout_width="172dp"
                 android:layout_height="48dp"
+                android:textColor="@color/darkerGreen"
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="text"
@@ -85,6 +93,7 @@
 
             <Switch
                 android:id="@+id/switch1"
+                android:textColor="@color/darkerGreen"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:textSize="20sp"
@@ -98,6 +107,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
+        android:textColor="@color/black"
+        android:background="@color/darkerGreen"
         android:text="Autor: 01091182294" />
 
 </LinearLayout>
